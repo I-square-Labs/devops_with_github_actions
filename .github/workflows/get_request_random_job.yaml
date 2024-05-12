@@ -1,0 +1,17 @@
+name: get random activity
+
+on:
+  workflow_dispatch
+
+jobs:
+    random_todo:
+        runs-on: ubuntu-latest
+        steps:
+            - name:
+              uses: actions/checkout@v4
+
+
+            - name: get list of south africa universities
+              run: |
+                 curl --request GET\
+                      --url http://universities.hipolabs.com/search?country=south+africa
