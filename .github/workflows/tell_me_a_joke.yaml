@@ -14,7 +14,7 @@ jobs:
       - name: checkout current repo 
         uses: actions/checkout@v4
 
-      - name: get random cat facts
+      - name: Fetch 5 remote tech jobs
         run: |
           curl --request GET\
                --url https://jobicy.com/api/v2/remote-jobs?count=5&industry=dev&tag=python+data+science+data+engineering&jobType=full-time
