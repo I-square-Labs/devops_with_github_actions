@@ -1,7 +1,11 @@
 name: IO DevOps init github actions
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+  push:
+    branches:
+      main-action
+  
 
 jobs:
   devops_job_1:
