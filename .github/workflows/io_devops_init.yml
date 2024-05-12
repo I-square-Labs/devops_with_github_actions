@@ -13,5 +13,5 @@ jobs:
        uses: actions/checkout@v4
 
      - name: Print happy words on console
-       run: echo "Devops with github actions"
+       run: echo "Devops CI github actions, ${{ runner.os }}" 
    
