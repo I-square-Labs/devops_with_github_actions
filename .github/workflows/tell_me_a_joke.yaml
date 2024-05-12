@@ -1,0 +1,22 @@
+name: on Push get a job
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      main-action
+
+jobs:
+  get_a_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout current repo 
+        uses: actions/checkout@v4
+
+      - name: get random cat facts
+        run: |
+          curl --request GET\
+               --url https://jobicy.com/api/v2/remote-jobs?count=5&industry=dev&tag=python+data+science+data+engineering&jobType=full-time
+
+    
