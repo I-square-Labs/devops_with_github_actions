@@ -1,6 +1,10 @@
 name: get request action
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      main-action
 
 jobs:
   get_cat_facts_job:
