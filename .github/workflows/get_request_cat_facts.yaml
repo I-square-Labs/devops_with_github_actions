@@ -1,0 +1,18 @@
+name: get request action
+
+on: workflow_dispatch
+
+jobs:
+  get_cat_facts_job:
+    runs-on: ubuntu:latest
+
+    steps:
+      - name: checkout current repo 
+        uses: actions/checkout@v4
+
+      - name: get random cat facts
+        run: |
+          curl --request GET\
+               --url https://catfact.ninja/fact
+
+    
