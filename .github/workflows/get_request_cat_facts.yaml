@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   get_cat_facts_job:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout current repo 
