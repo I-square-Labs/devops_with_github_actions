@@ -1,0 +1,17 @@
+name: IO DevOps init github actions
+
+on: 
+  workflow_dispatch
+
+jobs:
+  devops_job_1:
+   runs-on: ubuntu:latest
+
+   # Tasks in steps
+   steps:
+     - name: Check out repo's default branch
+       uses: actions/checkout@v4
+
+     - name: Print happy words on console
+       run: echo "Devops with github actions"
+   
